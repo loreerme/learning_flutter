@@ -1,30 +1,23 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp(
-    TextInput: new Text("Hello "),
-  ));
+  runApp(ExploreWidgets());
 }
 
-class MyApp extends StatelessWidget {
-  final Widget TextInput;
-  MyApp({this.TextInput});
-
+class ExploreWidgets extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return new MaterialApp(
-      title: "MyApp",
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text("Hello Flutter"),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Exploring Widgets")
         ),
-        body: new Center(
-          child: new Column(
-            children: <Widget>[
-              TextInput
-            ],
+        body: Container(
+          child: Center(
+            child: Text("Hello Flutter", style: TextStyle(color: Colors.white))
           ),
+          color: Colors.blue
         ),
       ),
     );
